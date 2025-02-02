@@ -1,0 +1,6 @@
+img, video {
+    max-width: 80%;  /* Cambié el 100% a 80% para hacerlos más pequeños */
+    height: auto;    /* Mantiene la proporción original */
+    border-radius: 15px;
+    margin-top: 15px;
+}

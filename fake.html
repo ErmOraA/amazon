@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon - Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .error-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+        }
+        .error-container h1 {
+            color: #B12704;
+        }
+        .retry-button {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .retry-button:hover {
+            background-color: #e68a00;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #232f3e;
+            color: white;
+            font-size: 14px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #ff9900;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Error inesperado</h1>
+        <p>Lo sentimos, ha ocurrido un problema al procesar tu compra. Inténtalo de nuevo.</p>
+        <button class="retry-button" onclick="retryPurchase()">Reintentar</button>
+    </div>
+    <div class="footer">
+        <p>Síguenos en nuestras redes sociales:</p>
+        <a href="https://www.facebook.com/Amazon/" target="_blank">Facebook</a>
+        <a href="https://twitter.com/amazon" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/amazon/" target="_blank">Instagram</a>
+    </div>
+    <script>
+        function retryPurchase() {
+            window.location.href = "valentin.html";
+        }
+    </script>
+</body>
+</html>

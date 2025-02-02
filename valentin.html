@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6rem;
+            font-weight: bold;
+            color: white;
+            mix-blend-mode: screen;
+            animation: zoomOut 3s forwards;
+            font-family: 'Great Vibes', cursive;
+        }
+        @keyframes zoomOut {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(10); opacity: 0; }
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeIn 3s 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            font-family: 'Great Vibes', cursive;
+        }
+        .content {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        img, video {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+        .heart {
+            position: absolute;
+            color: white;
+            font-size: 25px;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .date {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: white;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">MJ</div>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín? 🤍</h1>
+        <div class="content" contenteditable="true">
+            <p>Princesa, ya sabes todo lo que me importas, quiero, amo y respeto, y que siempre vas a ser la niña de mis ojos; pase lo que pase, así que no podía dejar pasar la oportunidad de pedirte ser mí San Valentín por segundo año consecutivo. Eres lo que siempre he soñado y más. Con lo que he aprendido viviendo a tu lado soy capaz de darme cuenta que las historias mas bonitas y rómanticas no son la de amor a primera vista, son las que sin importar el donde ni el cuando se tienen el uno al otro, viviendo aventuras y haciendo mil y una cosas pero siempre de la mano, y, María José Bermejo Guzmán tu eres de todas la mejor historia de amor jamás contada. Entonces, ¿Quieres ser mi San Valentín?.</p>
+        </div>
+    </div>
+    <div class="date">16/06/23</div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤';
+            document.body.appendChild(heart);
+            
+            const size = Math.random() * 20 + 10;
+            heart.style.fontSize = size + 'px';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.position = 'absolute';
+            
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            setTimeout(() => heart.remove(), 5000);
+        }
+        
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
